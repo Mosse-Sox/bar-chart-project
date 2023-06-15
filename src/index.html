@@ -12,23 +12,26 @@
 <body>
 
   <header>
-    <h1>
-    <a href="index.html">Simple Bar Charts!</a>
+    <h1 id="header-title-link">
+      <a href="index.html">Simple Bar Charts!</a>
     </h1>
 
     <p>Create your own barchart, simply!</p>
   </header>
 
+  <script src="app.js"></script>
   <form id="input-boxes">
     <h1>Your Data Here!</h1>
-    <input type="text" id="data-set-1" placeholder="Dataset 1">
-    <input type="text" id="data-set-2" placeholder="Dataset 2">
-    <input type="text" id="data-set-3" placeholder="Dataset 3">
+    <li><input type="text" id="data-set-1" placeholder="Dataset 1"></li>
+    <li><input type="text" id="data-set-2" placeholder="Dataset 2"></li>
+    <li><input type="text" id="data-set-3" placeholder="Dataset 3"></li>
     <button id="new-input-box-button">Add More Data</button>
+    <button id="submit-button">Generate Bar Chart</button>
   </form>
 
 
 
-</body>
-</html>
 
+</body>
+
+</html>
