@@ -1,18 +1,24 @@
-let dataSets = [];
-let numberOfInputBoxes = 3;
+import { inputBoxCount } from "../src/input-box-maker.js";
 
-$(document).ready(function() {
-  $("#generate-button").click(function() {
-    const dataSet1 = $("#data-set-1").val();
-    const dataSet2 = $("#data-set-2").val();
-    const dataSet3 = $("#data-set-3").val();
-    dataSets.push(dataSet1);
-    dataSets.push(dataSet2);
-    dataSets.push(dataSet3);
-    alert(dataSets);
+$(document).ready(function () {
+  $("#generate-button").click(function (event) {
+    event.preventDefault();
+
+    console.log("Button Clicked!");
+    console.log("inputBoxCount:", inputBoxCount);
+    var dataSets = [];
+    $('#input-boxes input.data-set').each(function () {
+      var dataSet = $(this).val();
+      dataSets.push(dataSet);
+    });
+
+    var output = dataSets.join(", ");
+    $("#output-div").html(`<p>${output}</p>`);
   });
-
-
-
-
 });
+
+
+
+
+
+

@@ -1,11 +1,13 @@
+export var inputBoxCount = 3;
+
 $(document).ready(function() {
-  var inputBoxCount = 3;
+
 
   function generateID(inputBoxCount) {
     return "data-set-" + inputBoxCount;
   }
 
-  $("#new-input-box-button").click(function() {
+  $("#new-input-box-button").click(function(event) {
     event.preventDefault();
 
     inputBoxCount++;

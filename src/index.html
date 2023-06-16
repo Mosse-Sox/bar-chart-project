@@ -19,22 +19,25 @@
     <p>Create your own barchart, simply!</p>
   </header>
 
-  <script src="app.js"></script>
-  <script src="input-box-maker.js"></script>
+  <script src="../src/input-box-maker.js" type="module"></script>
+  <script src="../src/app.js" type="module"></script>
   <form>
     <h1>Your Data Here!</h1>
     <ul id="input-boxes">
-      <li><input type="text" id="data-set-1" placeholder="Dataset 1"></li>
-      <li><input type="text" id="data-set-2" placeholder="Dataset 2"></li>
-      <li><input type="text" id="data-set-3" placeholder="Dataset 3"></li>
+      <li><input type="text" id="data-set-1" class="data-set" placeholder="Dataset 1"></li>
+      <li><input type="text" id="data-set-2" class="data-set" placeholder="Dataset 2"></li>
+      <li><input type="text" id="data-set-3" class="data-set" placeholder="Dataset 3"></li>
     </ul>
-    <button id="new-input-box-button">Add More Data</button>
-    <button id="generate-button">Generate Bar Chart</button>
   </form>
 
+  <div>
+    <button id="new-input-box-button">Add More Data</button>
+    <button id="generate-button">Generate Bar Chart</button>
+  </div>
 
-
-
+  <div id="output-div">
+    <p></p>
+  </div>
 
 </body>
 
