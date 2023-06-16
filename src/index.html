@@ -20,14 +20,18 @@
   </header>
 
   <script src="app.js"></script>
-  <form id="input-boxes">
+  <script src="input-box-maker.js"></script>
+  <form>
     <h1>Your Data Here!</h1>
-    <li><input type="text" id="data-set-1" placeholder="Dataset 1"></li>
-    <li><input type="text" id="data-set-2" placeholder="Dataset 2"></li>
-    <li><input type="text" id="data-set-3" placeholder="Dataset 3"></li>
+    <ul id="input-boxes">
+      <li><input type="text" id="data-set-1" placeholder="Dataset 1"></li>
+      <li><input type="text" id="data-set-2" placeholder="Dataset 2"></li>
+      <li><input type="text" id="data-set-3" placeholder="Dataset 3"></li>
+    </ul>
     <button id="new-input-box-button">Add More Data</button>
     <button id="generate-button">Generate Bar Chart</button>
   </form>
+
 
 
 
