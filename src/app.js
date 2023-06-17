@@ -4,21 +4,39 @@ $(document).ready(function () {
   $("#generate-button").click(function (event) {
     event.preventDefault();
 
-    console.log("Button Clicked!");
-    console.log("inputBoxCount:", inputBoxCount);
-    var dataSets = [];
-    $('#input-boxes input.data-set').each(function () {
-      var dataSet = $(this).val();
-      dataSets.push(dataSet);
-    });
+    var data = collectData();
+    var dataNames = collectName();
 
-    var output = dataSets.join(", ");
-    $("#output-div").html(`<p>${output}</p>`);
+    $("#output-div").html(`<p>${data}</p>`);
+    $("#output-div").append(`<p>${dataNames}</p>`);
   });
 });
 
+// function to collect data --- returns an array
+function collectData() {
+  var dataSets = [];
+
+  $('#input-boxes input.data-set').each(function () {
+    var dataSet = $(this).val();
+    dataSets.push(dataSet);
+  });
 
 
+
+  return dataSets;
+};
+
+// function to collect the names of the data sets --- returns an array
+function collectName() {
+  var dataNames = [];
+
+  $('#input-boxes input.data-label').each(function () {
+    var dataName = $(this).val();
+    dataNames.push(dataName);
+  });
+
+  return dataNames;
+}
 
 
 
