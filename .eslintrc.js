@@ -1,3 +1,6 @@
-export default {
-  'extends': 'lighthouselabs',
+module.exports = {
+  "extends": ["lighthouselabs"],
+  rules: {
+    "template/concatenation": "on",
+  },
 };

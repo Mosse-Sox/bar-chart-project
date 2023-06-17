@@ -4,9 +4,15 @@
   "description": "LHL bar chart stretch project",
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-lighthouselabs": "github:lighthouse-labs/eslint-config-lighthouselabs"
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-lighthouselabs": "github:lighthouse-labs/eslint-config-lighthouselabs",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2"
   },
   "dependencies": {
+    "eslint-plugin-template": "^0.7.0",
     "jquery": "^3.7.0"
   },
   "main": ".eslintrc.js",
