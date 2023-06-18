@@ -23,3 +23,13 @@ export function collectName() {
 
   return dataNames;
 }
+
+// a function to collect the axis names --- returns an array
+export function collectAxisLabels() {
+  var xAxis = $(".x-label").val();
+  var yAxis = $(".y-label").val();
+
+  var axisLabels = [xAxis, yAxis];
+
+  return axisLabels;
+}

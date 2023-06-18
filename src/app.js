@@ -1,5 +1,5 @@
 import { inputBoxCount } from "../src/input-box-handler.js";
-import { collectData, collectName } from "../src/collectors.js";
+import { collectAxisLabels, collectData, collectName } from "../src/collectors.js";
 import { inputBoxMaker } from "../src/input-box-handler.js";
 
 $(document).ready(function () {
@@ -10,10 +10,12 @@ $(document).ready(function () {
 
     var data = collectData();
     var dataNames = collectName();
+    var axisNames = collectAxisLabels();
 
     $("#output-div").html(`<p>${data}</p>`);
     $("#output-div").append(`<p>${dataNames}</p>`);
     $("#output-div").append(`<p>${inputBoxCount}</p>`);
+    $("#output-div").append(`<p>${axisNames}</p>`);
   });
 
 
