@@ -6,6 +6,10 @@
   <meta charset="utf-8">
   <title>Simple Bar Charts</title>
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../src/collectors.js" type="module"></script>
+  <script src="../src/input-box-handler.js" type="module"></script>
+  <script src="../src/barchart.js" type="module"></script>
+  <script src="../src/app.js" type="module"></script>
 </head>
 
 
@@ -18,10 +22,6 @@
 
     <p>Create your own barchart, simply!</p>
   </header>
-
-  <script src="../src/collectors.js" type="module"></script>
-  <script src="../src/input-box-handler.js" type="module"></script>
-  <script src="../src/app.js" type="module"></script>
 
   <form>
     <h1>Your Data Here!</h1>
@@ -50,12 +50,11 @@
 
   <div class="buttons">
     <button id="new-input-box-button">Add More Data</button>
-    <button id="generate-button">Generate Bar Chart</button>
     <button id="remove-button">Remove Data</button>
+    <button id="generate-button">Generate Bar Chart</button>
   </div>
 
   <div id="output-div">
-    <p></p>
     <p></p>
   </div>
 

@@ -1,6 +1,7 @@
 import { inputBoxCount, inputBoxRemover } from "../src/input-box-handler.js";
 import { collectAxisLabels, collectData, collectName } from "../src/collectors.js";
 import { inputBoxMaker } from "../src/input-box-handler.js";
+import { drawBarChart } from "../src/barchart.js";
 
 $(document).ready(function () {
 
@@ -11,10 +12,12 @@ $(document).ready(function () {
     var data = collectData();
     var dataNames = collectName();
     var axisNames = collectAxisLabels();
-
+    /*
     $("#output-div").html(`<p>${data}</p>`);
     $("#output-div").append(`<p>${dataNames}</p>`);
     $("#output-div").append(`<p>${axisNames}</p>`);
+    */
+    drawBarChart(data);
   })
 
 
