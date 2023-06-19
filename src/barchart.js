@@ -1,14 +1,19 @@
+import { sizeOptions } from "../src/customize.js";
+
 export function drawBarChart(data) {
 
+  var sizing = sizeOptions(data);
+
   $.each(data, function (index, value) {
-    var barWidth = value + "px";
+    var barHeight = value + "px";
 
     var $bar = $("<div></div>");
     $bar.addClass("bar");
-    $bar.css("width", barWidth);
+    $bar.css("height", barHeight);
 
 
-    $("#output-div").append($bar);
+    $(".output-div").append($bar);
   })
 
+  console.log(sizing);
 }

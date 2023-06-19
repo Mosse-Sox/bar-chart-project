@@ -45,3 +45,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.bar {
+  background-color: blue;
+  width: 50px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.output-div {
+  height: 200px;
+  margin-top: 20px;
+}

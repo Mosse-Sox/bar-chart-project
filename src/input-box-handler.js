@@ -1,19 +1,22 @@
 export var inputBoxCount = 3;
 
+// this function returns a numbered ID for dataset inputboxes
 function generateDataID(inputBoxCount) {
   return "data-set-" + inputBoxCount;
 }
 
+// this function returns a numbered ID for dataset labels/names
 function generateLabelID(inputBoxCount) {
   return "data-set-" + inputBoxCount + "-label";
 }
 
+// this function adds new input boxes for datasets and their labels up to 10 boxes on the page
 export function inputBoxMaker() {
   if (inputBoxCount < 10) {
     inputBoxCount++;
 
     $("#input-boxes").append(`<li>
-      <input type="text" class="data-set" id="${generateDataID(inputBoxCount)}" placeholder="Dataset ${inputBoxCount}"></input>
+      <input type="number" class="data-set" id="${generateDataID(inputBoxCount)}" min="0" placeholder="Dataset ${inputBoxCount}"></input>
       <input type="text" class="data-label" id="${generateLabelID(inputBoxCount)}" placeholder="Name of Data"></input>
     </li>`);
   } else {
@@ -21,6 +24,7 @@ export function inputBoxMaker() {
   }
 }
 
+// this function removes input boxes unless there is only one box on the page
 export function inputBoxRemover() {
 
   if (inputBoxCount > 1) {
