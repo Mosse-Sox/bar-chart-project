@@ -2,10 +2,15 @@
 export function collectData() {
   var dataSets = [];
 
+
   $('#input-boxes input.data-set').each(function () {
-    var dataSet = $(this).val();
-    dataSets.push(dataSet);
-  });
+    if ($(this).val() !== "") {
+      var dataSet = $(this).val();
+      dataSets.push(dataSet);
+    } else {
+      alert("Missing data");
+    }
+  })
 
 
 
@@ -17,19 +22,28 @@ export function collectName() {
   var dataNames = [];
 
   $('#input-boxes input.data-label').each(function () {
-    var dataName = $(this).val();
-    dataNames.push(dataName);
-  });
+    if ($(this).val() !== "") {
+      var dataName = $(this).val();
+      dataNames.push(dataName);
+    } else {
+      alert("Missing data");
+    }
+  })
 
   return dataNames;
 }
+
 
 // a function to collect the axis names --- returns an array
 export function collectAxisLabels() {
   var xAxis = $(".x-label").val();
   var yAxis = $(".y-label").val();
 
-  var axisLabels = [xAxis, yAxis];
+  if (xAxis !== "" && yAxis !== "") {
+    var axisLabels = [ xAxis, yAxis ];
+  } else {
+    alert("Missing label");
+  }
 
   return axisLabels;
 }
