@@ -1,5 +1,6 @@
 // helper function to calculate bar dimensions based on the value of data
-function calculateBarDimensions(value)  {
+function calculateBarDimensions(value, options, data)  {
+  const minBarHeight = 50;
   const { chartHeight, chartWidth } = options;
 
   const maxDataValue = Math.max(...data);
@@ -18,7 +19,7 @@ export function drawBarChart(data, options, element) {
   $(element).empty(); // Clear the contents of .output-div
 
   for (let value of data) {
-    const { barHeight, barWidth } = calculateBarDimensions(value, options);
+    const { barHeight, barWidth } = calculateBarDimensions(value, options, data);
 
     const $bar = $("<div></div>", { class: "bar" }).css({
       height: `${barHeight}px`,
