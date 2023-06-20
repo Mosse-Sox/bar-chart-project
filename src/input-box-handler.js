@@ -1,4 +1,4 @@
-export var inputBoxCount = 3;
+export let inputBoxCount = 3;
 
 // this function returns a numbered ID for dataset inputboxes
 function generateDataID(inputBoxCount) {

@@ -10,16 +10,16 @@ $(document).ready(function () {
   $("#generate-button").click(function (event) {
     event.preventDefault();
 
-    var data = collectData();
-    var dataNames = collectName();
-    var axisNames = collectAxisLabels();
-    var options = sizeOptions(data);
+    const data = collectData();
+    const dataNames = collectName();
+    const axisNames = collectAxisLabels();
+    const options = sizeOptions(data);
     /*
     $("#output-div").html(`<p>${data}</p>`);
     $("#output-div").append(`<p>${dataNames}</p>`);
     $("#output-div").append(`<p>${axisNames}</p>`);
     */
-    drawBarChart(data, options);
+    drawBarChart(data, options, ".output-div");
   })
 
 

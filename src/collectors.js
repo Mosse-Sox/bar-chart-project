@@ -1,11 +1,11 @@
 // function to collect data --- returns an array
 export function collectData() {
-  var dataSets = [];
-  var missingData = false;
+  let dataSets = [];
+  let missingData = false;
 
   $('#input-boxes input.data-set').each(function () {
     if ($(this).val() !== "") {
-      var dataSet = $(this).val();
+      const dataSet = $(this).val();
       dataSets.push(dataSet);
     } else {
       missingData = true;
