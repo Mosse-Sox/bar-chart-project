@@ -14,10 +14,37 @@ export function sizeOptions(data) {
   }
 
   const width = barWidth * data.length; // Calculate the total width based on the bar width and number of data points
-  const largestValue = Math.max(...data);
+
 
   options.chartWidth = width;
   options.chartHeight = 500; // Set the chart height to a fixed value of 500px
 
   return options;
 }
+
+/* in developement --- currently not working
+export function valueLabelAlignmentOption(alignment) {
+  const selectedOption = alignment;
+
+  $(".bar-label").each(function () {
+    const $bar = $(this).closest(".bar");
+    const barHeight = $bar.height();
+
+    switch (selectedOption) {
+      case "top":
+        $(this).css("top", `${barHeight + $(this).outerHeight() }px`);
+        break;
+      case "bottom":
+        $(this).css("top", `${barHeight - $(this).outerHeight()}px`);
+        break;
+      case "center":
+        $(this).css({
+          "display": "flex",
+          "align-items": "center",
+          "justify-content": "center"
+        })
+        break;
+    }
+  })
+}*/
+

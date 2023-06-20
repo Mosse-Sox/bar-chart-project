@@ -25,8 +25,8 @@
   </header>
 
   <form id="inputs">
-    <h1>Your Data Here!</h1>
-    <ul id="input-boxes">
+    <ul id="input-boxes" name="input-boxes">
+      <label id="your-data-here">Your Data Here!</label>
       <li>
         <input type="number" id="data-set-1" class="data-set" min="0" placeholder="Value">
         <input type="text" id="data-set-1-label" class="data-label" placeholder="Name of data">
@@ -52,9 +52,9 @@
       <li>
         <label for="value-label-position">Choose Label Alignment</label>
         <select name="value-label-position" id="value-label-position">
-          <option>Top</option>
-          <option>Bottom</option>
-          <option>Center</option>
+          <option value="center">Center</option>
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
         </select>
       </li>
     </ul>

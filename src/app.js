@@ -34,6 +34,13 @@ $(document).ready(function () {
     event.preventDefault();
     inputBoxRemover();
   })
+
+  /* not working
+  $("#value-label-position").on("change", function () {
+    const selectedOption = $(this).val();
+
+    valueLabelAlignmentOption(selectedOption);
+  })*/
 })
 
 
