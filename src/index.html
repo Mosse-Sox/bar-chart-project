@@ -24,35 +24,46 @@
     <p>Create your own barchart, simply!</p>
   </header>
 
-  <form>
+  <form id="inputs">
     <h1>Your Data Here!</h1>
     <ul id="input-boxes">
       <li>
-        <input type="number" id="data-set-1" class="data-set" min="0" placeholder="Dataset 1">
+        <input type="number" id="data-set-1" class="data-set" min="0" placeholder="Value">
         <input type="text" id="data-set-1-label" class="data-label" placeholder="Name of data">
       </li>
       <li>
-        <input type="number" id="data-set-2" class="data-set" min="0" placeholder="Dataset 2">
+        <input type="number" id="data-set-2" class="data-set" min="0" placeholder="Value">
         <input type="text" id="data-set-2-label" class="data-label" placeholder="Name of data">
       </li>
       <li>
-        <input type="number" id="data-set-3" class="data-set" min="0" placeholder="Dataset 3">
+        <input type="number" id="data-set-3" class="data-set" min="0" placeholder="Value">
         <input type="text" id="data-set-4-label" class="data-label" placeholder="Name of data">
       </li>
     </ul>
 
-    <ul id="last-list-item">
-      <li>
+    <ul>
+      <li id="last-list-item">
         <input type="text" class="x-label" placeholder="X-axis Label">
         <input type="text" class="y-label" placeholder="Y-axis Label">
       </li>
     </ul>
+
+    <ul>
+      <li>
+        <label for="value-label-position">Choose Label Alignment</label>
+        <select name="value-label-position" id="value-label-position">
+          <option>Top</option>
+          <option>Bottom</option>
+          <option>Center</option>
+        </select>
+      </li>
+    </ul>
   </form>
 
-  <div class="buttons">
-    <button id="new-input-box-button">Add More Data</button>
-    <button id="remove-button">Remove Data</button>
-    <button id="generate-button">Generate Bar Chart</button>
+  <div id="buttons">
+    <button class="button" id="new-input-box-button">Add More Data</button>
+    <button class="button" id="remove-button">Remove Data</button>
+    <button class="button" id="generate-button">Generate Bar Chart</button>
   </div>
 
   <div class="output-div"></div>
