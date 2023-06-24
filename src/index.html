@@ -18,24 +18,27 @@
 
   <header>
     <h1 id="header-title-link">
-      <a href="index.html">Simple Bar Charts!</a>
+      <a href="index.html">Simple Bar Charts</a>
     </h1>
 
-    <p>Create your own barchart, simply!</p>
+    <p>Create your own barchart, simply.</p>
   </header>
 
   <form id="inputs">
     <ul id="input-boxes" name="input-boxes">
       <label id="your-data-here">Your Data Here!</label>
       <li>
+        <label for="data-set">Dataset 1</label>
         <input type="number" id="data-set-1" class="data-set" min="0" placeholder="Value">
         <input type="text" id="data-set-1-label" class="data-label" placeholder="Name of data">
       </li>
       <li>
+        <label for="data-set">Dataset 2</label>
         <input type="number" id="data-set-2" class="data-set" min="0" placeholder="Value">
         <input type="text" id="data-set-2-label" class="data-label" placeholder="Name of data">
       </li>
       <li>
+        <label for="data-set">Dataset 3</label>
         <input type="number" id="data-set-3" class="data-set" min="0" placeholder="Value">
         <input type="text" id="data-set-4-label" class="data-label" placeholder="Name of data">
       </li>
@@ -43,6 +46,7 @@
 
     <ul>
       <li id="last-list-item">
+        <label for="x-label">X-Axis Label and Y-Axis Label</label>
         <input type="text" class="x-label" placeholder="X-axis Label">
         <input type="text" class="y-label" placeholder="Y-axis Label">
       </li>
@@ -50,7 +54,7 @@
 
     <ul>
       <li>
-        <label for="value-label-position">Choose Label Alignment</label>
+        <label for="value-label-position">Choose Label Alignment (On Bars)</label>
         <select name="value-label-position" id="value-label-position">
           <option value="center">Center</option>
           <option value="top">Top</option>
@@ -65,9 +69,9 @@
     <button class="button" id="remove-button">Remove Data</button>
     <button class="button" id="generate-button">Generate Bar Chart</button>
   </div>
-
-  <div class="output-div"></div>
-
+  <div class="container">
+    <div class="output-div"></div>
+  </div>
 </body>
 
 </html>

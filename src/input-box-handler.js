@@ -16,7 +16,8 @@ export function inputBoxMaker() {
     inputBoxCount++;
 
     $("#input-boxes").append(`<li>
-      <input type="number" class="data-set" id="${generateDataID(inputBoxCount)}" min="0" placeholder="Dataset ${inputBoxCount}"></input>
+      <label for="data-set">Dataset ${inputBoxCount}</label>
+      <input type="number" class="data-set" id="${generateDataID(inputBoxCount)}" min="0" placeholder="Value"></input>
       <input type="text" class="data-label" id="${generateLabelID(inputBoxCount)}" placeholder="Name of Data"></input>
     </li>`);
   } else {
