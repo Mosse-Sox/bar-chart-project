@@ -1,13 +1,13 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
-  License: none (public domain)
+   License: none (public domain)
 */
 
+/* Reset styles for various HTML elements */
 html,
 div,
 applet,
 object,
 iframe,
-h1,
 h2,
 h3,
 h4,
@@ -103,15 +103,23 @@ section {
   display: block;
 }
 
+/* Body styles */
 body {
   line-height: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(208, 146, 146);
+  color: rgb(250, 218, 144);
 }
 
+/* List styles */
 ol,
 ul {
   list-style: none;
 }
 
+/* Blockquote and Quote styles */
 blockquote,
 q {
   quotes: none;
@@ -125,11 +133,13 @@ q:after {
   content: none;
 }
 
+/* Table styles */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* Bar styles */
 .bar {
   background-color: blue;
   width: 50px;
@@ -137,9 +147,9 @@ table {
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
-
 }
 
+/* Bar label styles */
 .bar-label {
   color: white;
   text-align: center;
@@ -147,10 +157,11 @@ table {
   overflow: hidden;
   text-overflow: ellipsis;
   position: absolute;
-  left: "50%";
+  left: 50%;
   transform: translateX(-50%);
 }
 
+/* Output div styles */
 .output-div {
   height: 600px;
   margin: 20px 400px;
@@ -160,10 +171,12 @@ table {
   justify-content: center;
 }
 
+/* Inputs styles */
 #inputs {
   display: inline-block;
 }
 
+/* Button styles */
 .button {
   border: rgb(243, 198, 93);
   background-color: rgb(193, 117, 117);
@@ -173,35 +186,21 @@ table {
   left: center;
 }
 
+/* Buttons styles */
 #buttons {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-body {
-  background-color: rgb(208, 146, 146);
-  color: rgb(250, 218, 144);
-}
-
+/* Link styles */
 a {
   color: rgb(252, 245, 229);
 }
 
+/* Input and Select styles */
 input,
 select {
   background-color: rgb(252, 236, 200);
-  ;
   border-radius: 15px;
   text-align: center;
-  border-color: rgb(208, 146, 146);
-}
-
-header {
-  text-align: center;
-  justify-content: center;
-}
-
-span {
-  position: relative;
-  align-items: center;
-  justify-content: center;
 }
