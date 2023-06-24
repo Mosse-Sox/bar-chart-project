@@ -4,7 +4,6 @@
 
 html,
 div,
-span,
 applet,
 object,
 iframe,
@@ -147,13 +146,14 @@ table {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  position: absolute;
+  left: "50%";
+  transform: translateX(-50%);
 }
 
 .output-div {
   height: 600px;
-  margin-top: 20px;
-  margin-left: 400px;
-  margin-right: 400px;
+  margin: 20px 400px;
   background-color: white;
   display: flex;
   align-items: flex-end;
@@ -197,5 +197,11 @@ select {
 
 header {
   text-align: center;
+  justify-content: center;
+}
+
+span {
+  position: relative;
+  align-items: center;
   justify-content: center;
 }

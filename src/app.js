@@ -2,7 +2,7 @@ import { inputBoxCount, inputBoxRemover } from "../src/input-box-handler.js";
 import { collectAxisLabels, collectData, collectName } from "../src/collectors.js";
 import { inputBoxMaker } from "../src/input-box-handler.js";
 import { drawBarChart } from "../src/barchart.js";
-import { sizeOptions } from "../src/customize.js";
+import { sizeOptions, valueLabelAlignmentOption } from "../src/customize.js";
 
 $(document).ready(function () {
 
@@ -35,12 +35,12 @@ $(document).ready(function () {
     inputBoxRemover();
   })
 
-  /* not working
+
   $("#value-label-position").on("change", function () {
     const selectedOption = $(this).val();
 
     valueLabelAlignmentOption(selectedOption);
-  })*/
+  })
 })
 
 

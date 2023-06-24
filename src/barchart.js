@@ -1,4 +1,4 @@
-//import { valueLabelAlignmentOption } from "../src/customize.js";
+// import { valueLabelAlignmentOption } from "../src/customize.js";
 
 // helper function to calculate bar dimensions based on the value of data
 function calculateBarDimensions(value, options, data)  {

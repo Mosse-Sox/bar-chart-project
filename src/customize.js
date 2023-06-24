@@ -22,29 +22,37 @@ export function sizeOptions(data) {
   return options;
 }
 
-/* in developement --- currently not working
+
 export function valueLabelAlignmentOption(alignment) {
   const selectedOption = alignment;
 
   $(".bar-label").each(function () {
     const $bar = $(this).closest(".bar");
-    const barHeight = $bar.height();
+    const barWidth = $bar.width();
+    const labelWidth = $(this).outerWidth();
 
     switch (selectedOption) {
       case "top":
-        $(this).css("top", `${barHeight + $(this).outerHeight() }px`);
+        $(this).css({
+          top: "0px",
+          left: "50%",
+          transform: `translateX(-50%)`
+        });
         break;
       case "bottom":
-        $(this).css("top", `${barHeight - $(this).outerHeight()}px`);
+        $(this).css({
+          top: `${$bar.height() - $(this).outerHeight()}px`,
+          left: "50%",
+          transform: `translateX(-50%)`
+        });
         break;
       case "center":
         $(this).css({
-          "display": "flex",
-          "align-items": "center",
-          "justify-content": "center"
-        })
+          top: `${($bar.height() - $(this).outerHeight()) / 2}px`,
+          left: "50%",
+          transform: `translateX(-50%)`
+        });
         break;
     }
   })
-}*/
-
+}
